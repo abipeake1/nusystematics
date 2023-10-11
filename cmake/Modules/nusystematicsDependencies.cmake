@@ -13,7 +13,14 @@ include(message)
 
 find_package(systematicstools 23.06 REQUIRED)
 find_package(GENIE3 REQUIRED)
+CPMFindPackage(
+    NAME eigen3
+    VERSION 3.4.0
+    GITLAB_REPOSITORY "libeigen/eigen"
+    GIT_TAG "3.4.0"
+)
 
+message(FATAL_ERROR "help")
 if(DEFINED ROOT_CXX_STANDARD)
   if(NOT DEFINED CMAKE_CXX_STANDARD OR ROOT_CXX_STANDARD GREATER CMAKE_CXX_STANDARD)
     set(CMAKE_CXX_STANDARD ${ROOT_CXX_STANDARD})

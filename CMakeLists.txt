@@ -30,6 +30,13 @@ CPMFindPackage(
     GIT_TAG develop
     GITHUB_REPOSITORY luketpickering/systematicstools
 )
+CPMFindPackage(
+    NAME eigen3
+    VERSION 3.4.0
+    GITLAB_REPOSITORY "libeigen/eigen"
+    GIT_TAG "3.4.0"
+)
+
 
 if(DEFINED ENV{NuHepMCModules_ROOT})
   include($ENV{NuHepMCModules_ROOT}/NuHepMCModules.cmake)
