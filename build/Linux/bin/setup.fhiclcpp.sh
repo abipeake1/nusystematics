@@ -1,0 +1,100 @@
+if [ ! -z ${BASH_VERSINFO} ] && (( BASH_VERSINFO[0] < 2 )); then
+  echo "[ERROR]: You must source this setup script (not run it in a sub-shell). Use like $ source setup.sh"
+  exit 1
+fi
+
+if ! type abspath &> /dev/null; then
+
+#Adapted from
+# https://superuser.com/questions/205127/how-to-retrieve-the-absolute-path-of-an-arbitrary-file-from-the-os-x/218684#218684
+function abspath() { 
+  ABS_PATH_OPWD=$(pwd)
+  if [ ! -e "${1}" ]; then
+    :
+  elif [ -d "$1" ]; then 
+    cd "$1"; pwd; 
+  else 
+    cd $(dirname \"$1\"); 
+    cur_dir=$(pwd); 
+    if [ "$cur_dir" = "/" ]; then 
+      echo "$cur_dir$(basename \"$1\")"; 
+    else echo "$cur_dir/$(basename \"$1\")"; 
+    fi; 
+  fi; 
+  cd ${ABS_PATH_OPWD}
+}
+
+fi
+
+if ! type add_to_PATH &> /dev/null; then
+
+### Adapted from https://unix.stackexchange.com/questions/4965/keep-duplicates-out-of-path-on-source
+function add_to_PATH () {
+  for d; do
+
+    d=$(cd -- "$d" && { pwd -P || pwd; }) 2>/dev/null  # canonicalize symbolic links
+    if [ -z "$d" ]; then continue; fi  # skip nonexistent directory
+
+    if [ "$d" = "/usr/bin" ] || [ "$d" = "/usr/bin64" ] || [ "$d" = "/usr/local/bin" ] || [ "$d" = "/usr/local/bin64" ]; then
+      case ":$PATH:" in
+        *":$d:"*) :;;
+        *) export PATH=$PATH:$d;;
+      esac
+    else
+      case ":$PATH:" in
+        *":$d:"*) :;;
+        *) export PATH=$d:$PATH;;
+      esac
+    fi
+  done
+}
+
+fi
+
+if ! type add_to_LD_LIBRARY_PATH &> /dev/null; then
+
+function add_to_LD_LIBRARY_PATH () {
+  for d; do
+
+    d=$(cd -- "$d" && { pwd -P || pwd; }) 2>/dev/null  # canonicalize symbolic links
+    if [ -z "$d" ]; then continue; fi  # skip nonexistent directory
+
+    if [ "$d" = "/usr/lib" ] || [ "$d" = "/usr/lib64" ] || [ "$d" = "/usr/local/lib" ] || [ "$d" = "/usr/local/lib64" ]; then
+      case ":$LD_LIBRARY_PATH:" in
+        *":$d:"*) :;;
+        *) export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$d;;
+      esac
+    else
+      case ":$LD_LIBRARY_PATH:" in
+        *":$d:"*) :;;
+        *) export LD_LIBRARY_PATH=$d:$LD_LIBRARY_PATH;;
+      esac
+    fi
+  done
+}
+
+fi
+if ! type add_to_FHICL_FILE_PATH &> /dev/null; then
+
+function add_to_FHICL_FILE_PATH () {
+  for d; do
+
+    d=$(cd -- "$d" && { pwd -P || pwd; }) 2>/dev/null  # canonicalize symbolic links
+    if [ -z "$d" ]; then continue; fi  # skip nonexistent directory
+    case ":$FHICL_FILE_PATH:" in
+      *":$d:"*) :;;
+      *) export FHICL_FILE_PATH=$d:$FHICL_FILE_PATH;;
+    esac
+  done
+}
+
+fi
+
+export fhiclcpp_ROOT="/root/software/newsystematics_new/build/Linux"
+export fhiclcpp_VERSION="23.6"
+
+add_to_PATH "${fhiclcpp_ROOT}/bin"
+
+if [ "FALSE" == "TRUE" ]; then
+  add_to_FHICL_FILE_PATH "${fhiclcpp_ROOT}/fcl"
+fi

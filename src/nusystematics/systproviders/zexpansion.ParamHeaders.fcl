@@ -1,0 +1,150 @@
+generated_systematic_provider_configuration: {
+   GENIEReWeight_zexp_bparams_b1: {
+      MaCCQE: {
+         centralParamValue: 0
+         paramVariations: [
+            -1,
+            1,
+            -2,
+            2,
+            -3,
+            3
+         ]
+         prettyName: "b1"
+         systParamId: 1
+         rand_dist: "uniform"
+         number_of_throws: 10
+      }
+      #instance_name: "ICARUS_v1_multisigma"
+      instance_name: "multiuniverse_centershift"
+      parameter_headers: [
+         "MaCCQE",
+      ]
+      tool_options: {
+         AxFFCCQEDipoleToZExp: false
+         CCRESIsShapeOnly: false
+         DISBYIsShapeOnly: false
+         MaCCQEIsShapeOnly: false
+         NCRESIsShapeOnly: false
+         UseFullHERG: true
+         evgen_list_name: ""
+         fill_valid_tree: false
+         genie_tune_name: "${GENIE_XSEC_TUNE}"
+         ignore_parameter_dependence: true
+      }
+      tool_type: "GENIEReWeight"
+   }
+
+    GENIEReWeight_zexp_bparams_b2: {
+      MaCCQE: {
+         centralParamValue: 0
+         paramVariations: [
+            -1,
+            1,
+            -2,
+            2,
+            -3,
+            3
+         ]
+         prettyName: "b2"
+         systParamId: 2
+         rand_dist: "uniform"
+         number_of_throws: 10
+      }
+      #instance_name: "ICARUS_v1_multisigma"
+      instance_name: "multiuniverse_centershift"
+      parameter_headers: [
+         "MaCCQE",
+      ]
+      tool_options: {
+         AxFFCCQEDipoleToZExp: false
+         CCRESIsShapeOnly: false
+         DISBYIsShapeOnly: false
+         MaCCQEIsShapeOnly: false
+         NCRESIsShapeOnly: false
+         UseFullHERG: true
+         evgen_list_name: ""
+         fill_valid_tree: false
+         genie_tune_name: "${GENIE_XSEC_TUNE}"
+         ignore_parameter_dependence: true
+      }
+      tool_type: "GENIEReWeight"
+   }
+
+   GENIEReWeight_zexp_bparams_b3: {
+      MaCCQE: {
+         centralParamValue: 0
+         paramVariations: [
+            -1,
+            1,
+            -2,
+            2,
+            -3,
+            3
+         ]
+         prettyName: "b3"
+         systParamId: 3
+         rand_dist: "uniform"
+         number_of_throws: 10
+      }
+      #instance_name: "ICARUS_v1_multisigma"
+      instance_name: "multiuniverse_centershift"
+      parameter_headers: [
+         "MaCCQE",
+      ]
+      tool_options: {
+         AxFFCCQEDipoleToZExp: false
+         CCRESIsShapeOnly: false
+         DISBYIsShapeOnly: false
+         MaCCQEIsShapeOnly: false
+         NCRESIsShapeOnly: false
+         UseFullHERG: true
+         evgen_list_name: ""
+         fill_valid_tree: false
+         genie_tune_name: "${GENIE_XSEC_TUNE}"
+         ignore_parameter_dependence: true
+      }
+      tool_type: "GENIEReWeight"
+   }
+
+   GENIEReWeight_zexp_bparams_b4: {
+      MaCCQE: {
+         centralParamValue: 0
+         paramVariations: [
+            -1,
+            1,
+            -2,
+            2,
+            -3,
+            3
+         ]
+         prettyName: "b4"
+         systParamId: 4
+         rand_dist: "uniform"
+         number_of_throws: 10
+      }
+      #instance_name: "ICARUS_v1_multisigma"
+      instance_name: "multiuniverse_centershift"
+      parameter_headers: [
+         "MaCCQE",
+      ]
+      tool_options: {
+         AxFFCCQEDipoleToZExp: false
+         CCRESIsShapeOnly: false
+         DISBYIsShapeOnly: false
+         MaCCQEIsShapeOnly: false
+         NCRESIsShapeOnly: false
+         UseFullHERG: true
+         evgen_list_name: ""
+         fill_valid_tree: false
+         genie_tune_name: "${GENIE_XSEC_TUNE}"
+         ignore_parameter_dependence: true
+      }
+      tool_type: "GENIEReWeight"
+   }
+
+
+   syst_providers: [
+      "GENIEReWeight_ICARUS_v1_multisigma",
+   ]
+}

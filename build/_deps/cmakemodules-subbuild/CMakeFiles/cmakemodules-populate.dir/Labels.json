@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/root/software/newsystematics_new/build/_deps/cmakemodules-subbuild/CMakeFiles/cmakemodules-populate"
+		},
+		{
+			"file" : "/root/software/newsystematics_new/build/_deps/cmakemodules-subbuild/CMakeFiles/cmakemodules-populate.rule"
+		},
+		{
+			"file" : "/root/software/newsystematics_new/build/_deps/cmakemodules-subbuild/CMakeFiles/cmakemodules-populate-complete.rule"
+		},
+		{
+			"file" : "/root/software/newsystematics_new/build/_deps/cmakemodules-subbuild/cmakemodules-populate-prefix/src/cmakemodules-populate-stamp/cmakemodules-populate-build.rule"
+		},
+		{
+			"file" : "/root/software/newsystematics_new/build/_deps/cmakemodules-subbuild/cmakemodules-populate-prefix/src/cmakemodules-populate-stamp/cmakemodules-populate-configure.rule"
+		},
+		{
+			"file" : "/root/software/newsystematics_new/build/_deps/cmakemodules-subbuild/cmakemodules-populate-prefix/src/cmakemodules-populate-stamp/cmakemodules-populate-download.rule"
+		},
+		{
+			"file" : "/root/software/newsystematics_new/build/_deps/cmakemodules-subbuild/cmakemodules-populate-prefix/src/cmakemodules-populate-stamp/cmakemodules-populate-install.rule"
+		},
+		{
+			"file" : "/root/software/newsystematics_new/build/_deps/cmakemodules-subbuild/cmakemodules-populate-prefix/src/cmakemodules-populate-stamp/cmakemodules-populate-mkdir.rule"
+		},
+		{
+			"file" : "/root/software/newsystematics_new/build/_deps/cmakemodules-subbuild/cmakemodules-populate-prefix/src/cmakemodules-populate-stamp/cmakemodules-populate-patch.rule"
+		},
+		{
+			"file" : "/root/software/newsystematics_new/build/_deps/cmakemodules-subbuild/cmakemodules-populate-prefix/src/cmakemodules-populate-stamp/cmakemodules-populate-test.rule"
+		},
+		{
+			"file" : "/root/software/newsystematics_new/build/_deps/cmakemodules-subbuild/cmakemodules-populate-prefix/src/cmakemodules-populate-stamp/cmakemodules-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"cmakemodules-populate"
+		],
+		"name" : "cmakemodules-populate"
+	}
+}

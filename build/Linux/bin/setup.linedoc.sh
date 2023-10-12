@@ -1,0 +1,57 @@
+if [ ! -z ${BASH_VERSINFO} ] && (( BASH_VERSINFO[0] < 2 )); then
+  echo "[ERROR]: You must source this setup script (not run it in a sub-shell). Use like $ source setup.sh"
+  exit 1
+fi
+
+if ! type abspath &> /dev/null; then
+
+#Adapted from
+# https://superuser.com/questions/205127/how-to-retrieve-the-absolute-path-of-an-arbitrary-file-from-the-os-x/218684#218684
+function abspath() { 
+  ABS_PATH_OPWD=$(pwd)
+  if [ ! -e "${1}" ]; then
+    :
+  elif [ -d "$1" ]; then 
+    cd "$1"; pwd; 
+  else 
+    cd $(dirname \"$1\"); 
+    cur_dir=$(pwd); 
+    if [ "$cur_dir" = "/" ]; then 
+      echo "$cur_dir$(basename \"$1\")"; 
+    else echo "$cur_dir/$(basename \"$1\")"; 
+    fi; 
+  fi; 
+  cd ${ABS_PATH_OPWD}
+}
+
+fi
+
+if ! type add_to_PATH &> /dev/null; then
+
+### Adapted from https://unix.stackexchange.com/questions/4965/keep-duplicates-out-of-path-on-source
+function add_to_PATH () {
+  for d; do
+
+    d=$(cd -- "$d" && { pwd -P || pwd; }) 2>/dev/null  # canonicalize symbolic links
+    if [ -z "$d" ]; then continue; fi  # skip nonexistent directory
+
+    if [ "$d" = "/usr/bin" ] || [ "$d" = "/usr/bin64" ] || [ "$d" = "/usr/local/bin" ] || [ "$d" = "/usr/local/bin64" ]; then
+      case ":$PATH:" in
+        *":$d:"*) :;;
+        *) export PATH=$PATH:$d;;
+      esac
+    else
+      case ":$PATH:" in
+        *":$d:"*) :;;
+        *) export PATH=$d:$PATH;;
+      esac
+    fi
+  done
+}
+
+fi
+
+export linedoc_ROOT="/root/software/newsystematics_new/build/Linux"
+export linedoc_VERSION="23.6"
+
+add_to_PATH "${linedoc_ROOT}/bin"

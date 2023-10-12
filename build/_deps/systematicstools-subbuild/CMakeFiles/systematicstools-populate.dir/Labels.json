@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/root/software/newsystematics_new/build/_deps/systematicstools-subbuild/CMakeFiles/systematicstools-populate"
+		},
+		{
+			"file" : "/root/software/newsystematics_new/build/_deps/systematicstools-subbuild/CMakeFiles/systematicstools-populate.rule"
+		},
+		{
+			"file" : "/root/software/newsystematics_new/build/_deps/systematicstools-subbuild/CMakeFiles/systematicstools-populate-complete.rule"
+		},
+		{
+			"file" : "/root/software/newsystematics_new/build/_deps/systematicstools-subbuild/systematicstools-populate-prefix/src/systematicstools-populate-stamp/systematicstools-populate-build.rule"
+		},
+		{
+			"file" : "/root/software/newsystematics_new/build/_deps/systematicstools-subbuild/systematicstools-populate-prefix/src/systematicstools-populate-stamp/systematicstools-populate-configure.rule"
+		},
+		{
+			"file" : "/root/software/newsystematics_new/build/_deps/systematicstools-subbuild/systematicstools-populate-prefix/src/systematicstools-populate-stamp/systematicstools-populate-download.rule"
+		},
+		{
+			"file" : "/root/software/newsystematics_new/build/_deps/systematicstools-subbuild/systematicstools-populate-prefix/src/systematicstools-populate-stamp/systematicstools-populate-install.rule"
+		},
+		{
+			"file" : "/root/software/newsystematics_new/build/_deps/systematicstools-subbuild/systematicstools-populate-prefix/src/systematicstools-populate-stamp/systematicstools-populate-mkdir.rule"
+		},
+		{
+			"file" : "/root/software/newsystematics_new/build/_deps/systematicstools-subbuild/systematicstools-populate-prefix/src/systematicstools-populate-stamp/systematicstools-populate-patch.rule"
+		},
+		{
+			"file" : "/root/software/newsystematics_new/build/_deps/systematicstools-subbuild/systematicstools-populate-prefix/src/systematicstools-populate-stamp/systematicstools-populate-test.rule"
+		},
+		{
+			"file" : "/root/software/newsystematics_new/build/_deps/systematicstools-subbuild/systematicstools-populate-prefix/src/systematicstools-populate-stamp/systematicstools-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"systematicstools-populate"
+		],
+		"name" : "systematicstools-populate"
+	}
+}

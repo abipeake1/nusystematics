@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/root/software/newsystematics_new/build/_deps/linedoc-subbuild/CMakeFiles/linedoc-populate"
+		},
+		{
+			"file" : "/root/software/newsystematics_new/build/_deps/linedoc-subbuild/CMakeFiles/linedoc-populate.rule"
+		},
+		{
+			"file" : "/root/software/newsystematics_new/build/_deps/linedoc-subbuild/CMakeFiles/linedoc-populate-complete.rule"
+		},
+		{
+			"file" : "/root/software/newsystematics_new/build/_deps/linedoc-subbuild/linedoc-populate-prefix/src/linedoc-populate-stamp/linedoc-populate-build.rule"
+		},
+		{
+			"file" : "/root/software/newsystematics_new/build/_deps/linedoc-subbuild/linedoc-populate-prefix/src/linedoc-populate-stamp/linedoc-populate-configure.rule"
+		},
+		{
+			"file" : "/root/software/newsystematics_new/build/_deps/linedoc-subbuild/linedoc-populate-prefix/src/linedoc-populate-stamp/linedoc-populate-download.rule"
+		},
+		{
+			"file" : "/root/software/newsystematics_new/build/_deps/linedoc-subbuild/linedoc-populate-prefix/src/linedoc-populate-stamp/linedoc-populate-install.rule"
+		},
+		{
+			"file" : "/root/software/newsystematics_new/build/_deps/linedoc-subbuild/linedoc-populate-prefix/src/linedoc-populate-stamp/linedoc-populate-mkdir.rule"
+		},
+		{
+			"file" : "/root/software/newsystematics_new/build/_deps/linedoc-subbuild/linedoc-populate-prefix/src/linedoc-populate-stamp/linedoc-populate-patch.rule"
+		},
+		{
+			"file" : "/root/software/newsystematics_new/build/_deps/linedoc-subbuild/linedoc-populate-prefix/src/linedoc-populate-stamp/linedoc-populate-test.rule"
+		},
+		{
+			"file" : "/root/software/newsystematics_new/build/_deps/linedoc-subbuild/linedoc-populate-prefix/src/linedoc-populate-stamp/linedoc-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"linedoc-populate"
+		],
+		"name" : "linedoc-populate"
+	}
+}

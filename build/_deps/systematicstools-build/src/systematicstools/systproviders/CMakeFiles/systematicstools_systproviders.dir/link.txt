@@ -1,0 +1,1 @@
+/usr/bin/g++ -fPIC -shared -Wl,-soname,libsystematicstools_systproviders.so -o libsystematicstools_systproviders.so CMakeFiles/systematicstools_systproviders.dir/ExampleISystProvider_tool.cc.o  -Wl,-rpath,/root/software/newsystematics_new/build/_deps/systematicstools-build/src/systematicstools/interface: ../interface/libsystematicstools_interface.so 
