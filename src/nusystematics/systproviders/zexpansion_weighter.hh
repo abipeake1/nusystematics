@@ -58,7 +58,10 @@ private:
   // Concrete example is more clear with some actual implementation, we will use
   // some GENIE reweight engines.
   std::array<std::vector<genie::rew::GReWeightNuXSecCCQE>, 4> ReWeightEngines;
-
+  //std::array<std::unique_ptr<genie::rew::GReWeightNuXSecCCQE>> ReWeightEngines_new;
+  std::array<std::vector<std::unique_ptr<genie::rew::GReWeightNuXSecCCQE>>, 4> ReWeightEngines_new;
+  
+  
   // configurable verbosity as an example of some arbitrary systprovider
   // configuration
   int verbosity_level;

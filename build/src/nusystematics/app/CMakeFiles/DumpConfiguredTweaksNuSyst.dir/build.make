@@ -124,10 +124,10 @@ src/nusystematics/app/DumpConfiguredTweaksNuSyst: /opt/root/v6-26-10/lib/libPhys
 src/nusystematics/app/DumpConfiguredTweaksNuSyst: /usr/lib64/libxml2.so
 src/nusystematics/app/DumpConfiguredTweaksNuSyst: /usr/lib64/libgsl.so
 src/nusystematics/app/DumpConfiguredTweaksNuSyst: /usr/lib64/libgslcblas.so
-src/nusystematics/app/DumpConfiguredTweaksNuSyst: Linux/lib/libsystematicstools_interpreters.so
-src/nusystematics/app/DumpConfiguredTweaksNuSyst: Linux/lib/libsystematicstools_utility.so
-src/nusystematics/app/DumpConfiguredTweaksNuSyst: Linux/lib/libsystematicstools_systproviders.so
-src/nusystematics/app/DumpConfiguredTweaksNuSyst: Linux/lib/libsystematicstools_interface.so
+src/nusystematics/app/DumpConfiguredTweaksNuSyst: _deps/systematicstools-build/src/systematicstools/interpreters/libsystematicstools_interpreters.so
+src/nusystematics/app/DumpConfiguredTweaksNuSyst: _deps/systematicstools-build/src/systematicstools/utility/libsystematicstools_utility.so
+src/nusystematics/app/DumpConfiguredTweaksNuSyst: _deps/systematicstools-build/src/systematicstools/systproviders/libsystematicstools_systproviders.so
+src/nusystematics/app/DumpConfiguredTweaksNuSyst: _deps/systematicstools-build/src/systematicstools/interface/libsystematicstools_interface.so
 src/nusystematics/app/DumpConfiguredTweaksNuSyst: /opt/root/v6-26-10/lib/libHist.so
 src/nusystematics/app/DumpConfiguredTweaksNuSyst: /opt/root/v6-26-10/lib/libMatrix.so
 src/nusystematics/app/DumpConfiguredTweaksNuSyst: /opt/root/v6-26-10/lib/libMathCore.so

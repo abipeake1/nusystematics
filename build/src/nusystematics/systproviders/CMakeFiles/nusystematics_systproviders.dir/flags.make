@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/g++
 CXX_DEFINES = -Dnusystematics_systproviders_EXPORTS
 
-CXX_INCLUDES = -I/root/software/newsystematics_new/src -isystem /opt/genie/3_02_02/include/GENIE -isystem /opt/genie/3_02_02/src -isystem /opt/root/v6-26-10/include -isystem /opt/lhapdf/5.9.1/include -isystem /usr/include/libxml2 -isystem /root/software/newsystematics_new/build/Linux/include -isystem /root/software/nuisance/build/Linux/include/eigen3
+CXX_INCLUDES = -I/root/software/newsystematics_new/src -I/root/software/newsystematics_new/build/_deps/fhiclcpp-src -I/root/software/newsystematics_new/build/_deps/linedoc-src -I/root/software/newsystematics_new/build/_deps/systematicstools-src/src -isystem /opt/genie/3_02_02/include/GENIE -isystem /opt/genie/3_02_02/src -isystem /opt/root/v6-26-10/include -isystem /opt/lhapdf/5.9.1/include -isystem /usr/include/libxml2 -isystem /root/software/nuisance/build/Linux/include/eigen3
 
-CXX_FLAGS = -fPIC -DGENIE_ENABLED -DGENIE_VERSION=302 -std=gnu++17
+CXX_FLAGS = -g -fPIC -DGENIE_ENABLED -DGENIE_VERSION=302 -std=gnu++17
 

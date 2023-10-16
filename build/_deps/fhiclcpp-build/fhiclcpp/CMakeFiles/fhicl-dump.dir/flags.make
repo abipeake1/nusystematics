@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/root/software/newsystematics_new/build/_deps/fhiclcpp-src -I/root/software/newsystematics_new/build/_deps/linedoc-src
 
-CXX_FLAGS = -std=gnu++17
+CXX_FLAGS = -g -std=gnu++17
 

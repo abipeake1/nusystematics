@@ -1,1 +1,1 @@
-/usr/bin/g++ CMakeFiles/fhicl-dump.dir/fhicl-dump.cxx.o -o fhicl-dump 
+/usr/bin/g++ -g CMakeFiles/fhicl-dump.dir/fhicl-dump.cxx.o -o fhicl-dump 

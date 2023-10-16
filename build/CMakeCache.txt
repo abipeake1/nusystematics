@@ -22,7 +22,7 @@ CMAKE_AR:FILEPATH=/usr/bin/ar
 
 //Choose the type of build, options are: None Debug Release RelWithDebInfo
 // MinSizeRel ...
-CMAKE_BUILD_TYPE:STRING=
+CMAKE_BUILD_TYPE:STRING=Debug
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
@@ -70,9 +70,6 @@ CMAKE_C_FLAGS:STRING=
 //Flags used by the C compiler during DEBUG builds.
 CMAKE_C_FLAGS_DEBUG:STRING=-g
 
-//Flags used by the C compiler during DEBWITHRELINFO builds.
-CMAKE_C_FLAGS_DEBWITHRELINFO:STRING=
-
 //Flags used by the C compiler during MINSIZEREL builds.
 CMAKE_C_FLAGS_MINSIZEREL:STRING=-Os -DNDEBUG
 
@@ -90,9 +87,6 @@ CMAKE_EXE_LINKER_FLAGS:STRING=
 
 //Flags used by the linker during DEBUG builds.
 CMAKE_EXE_LINKER_FLAGS_DEBUG:STRING=
-
-//Flags used by the linker during DEBWITHRELINFO builds.
-CMAKE_EXE_LINKER_FLAGS_DEBWITHRELINFO:STRING=
 
 //Flags used by the linker during MINSIZEREL builds.
 CMAKE_EXE_LINKER_FLAGS_MINSIZEREL:STRING=
@@ -122,10 +116,6 @@ CMAKE_MODULE_LINKER_FLAGS:STRING=
 //Flags used by the linker during the creation of modules during
 // DEBUG builds.
 CMAKE_MODULE_LINKER_FLAGS_DEBUG:STRING=
-
-//Flags used by the linker during the creation of modules during
-// DEBWITHRELINFO builds.
-CMAKE_MODULE_LINKER_FLAGS_DEBWITHRELINFO:STRING=
 
 //Flags used by the linker during the creation of modules during
 // MINSIZEREL builds.
@@ -187,10 +177,6 @@ CMAKE_SHARED_LINKER_FLAGS:STRING=
 CMAKE_SHARED_LINKER_FLAGS_DEBUG:STRING=
 
 //Flags used by the linker during the creation of shared libraries
-// during DEBWITHRELINFO builds.
-CMAKE_SHARED_LINKER_FLAGS_DEBWITHRELINFO:STRING=
-
-//Flags used by the linker during the creation of shared libraries
 // during MINSIZEREL builds.
 CMAKE_SHARED_LINKER_FLAGS_MINSIZEREL:STRING=
 
@@ -216,10 +202,6 @@ CMAKE_STATIC_LINKER_FLAGS:STRING=
 //Flags used by the linker during the creation of static libraries
 // during DEBUG builds.
 CMAKE_STATIC_LINKER_FLAGS_DEBUG:STRING=
-
-//Flags used by the linker during the creation of static libraries
-// during DEBWITHRELINFO builds.
-CMAKE_STATIC_LINKER_FLAGS_DEBWITHRELINFO:STRING=
 
 //Flags used by the linker during the creation of static libraries
 // during MINSIZEREL builds.
@@ -493,15 +475,6 @@ eigen3_DIR:PATH=/root/software/nuisance/build/Linux/share/eigen3/cmake
 //Value Computed by CMake
 fhiclcpp_BINARY_DIR:STATIC=/root/software/newsystematics_new/build/_deps/fhiclcpp-build
 
-//The directory containing a CMake configuration file for fhiclcpp.
-fhiclcpp_DIR:PATH=/root/software/newsystematics_new/build/Linux/lib/cmake/fhiclcpp
-
-//Path to a file.
-fhiclcpp_INCLUDE_DIR:PATH=/root/software/newsystematics_new/build/Linux/include
-
-//Path to a file.
-fhiclcpp_PREFIX:PATH=/root/software/newsystematics_new/build/Linux
-
 //Value Computed by CMake
 fhiclcpp_SOURCE_DIR:STATIC=/root/software/newsystematics_new/build/_deps/fhiclcpp-src
 
@@ -509,13 +482,7 @@ fhiclcpp_SOURCE_DIR:STATIC=/root/software/newsystematics_new/build/_deps/fhiclcp
 linedoc_BINARY_DIR:STATIC=/root/software/newsystematics_new/build/_deps/linedoc-build
 
 //The directory containing a CMake configuration file for linedoc.
-linedoc_DIR:PATH=/root/software/newsystematics_new/build/Linux/lib/cmake/linedoc
-
-//Path to a file.
-linedoc_INCLUDE_DIR:PATH=/root/software/newsystematics_new/build/Linux/include
-
-//Path to a file.
-linedoc_PREFIX:PATH=/root/software/newsystematics_new/build/Linux
+linedoc_DIR:PATH=linedoc_DIR-NOTFOUND
 
 //Value Computed by CMake
 linedoc_SOURCE_DIR:STATIC=/root/software/newsystematics_new/build/_deps/linedoc-src
@@ -542,7 +509,7 @@ pkgcfg_lib_PC_LIBXML_xml2:FILEPATH=/usr/lib64/libxml2.so
 systematicstools_BINARY_DIR:STATIC=/root/software/newsystematics_new/build/_deps/systematicstools-build
 
 //The directory containing a CMake configuration file for systematicstools.
-systematicstools_DIR:PATH=/root/software/newsystematics_new/build/Linux/lib/cmake/systematicstools
+systematicstools_DIR:PATH=systematicstools_DIR-NOTFOUND
 
 //Value Computed by CMake
 systematicstools_SOURCE_DIR:STATIC=/root/software/newsystematics_new/build/_deps/systematicstools-src
@@ -598,8 +565,6 @@ CMAKE_C_COMPILER_RANLIB-ADVANCED:INTERNAL=1
 CMAKE_C_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_FLAGS_DEBUG
 CMAKE_C_FLAGS_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_C_FLAGS_DEBWITHRELINFO
-CMAKE_C_FLAGS_DEBWITHRELINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_FLAGS_MINSIZEREL
 CMAKE_C_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_FLAGS_RELEASE
@@ -616,8 +581,6 @@ CMAKE_EXECUTABLE_FORMAT:INTERNAL=ELF
 CMAKE_EXE_LINKER_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS_DEBUG
 CMAKE_EXE_LINKER_FLAGS_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS_DEBWITHRELINFO
-CMAKE_EXE_LINKER_FLAGS_DEBWITHRELINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS_MINSIZEREL
 CMAKE_EXE_LINKER_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS_RELEASE
@@ -649,8 +612,6 @@ CMAKE_MAKE_PROGRAM-ADVANCED:INTERNAL=1
 CMAKE_MODULE_LINKER_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MODULE_LINKER_FLAGS_DEBUG
 CMAKE_MODULE_LINKER_FLAGS_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_MODULE_LINKER_FLAGS_DEBWITHRELINFO
-CMAKE_MODULE_LINKER_FLAGS_DEBWITHRELINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MODULE_LINKER_FLAGS_MINSIZEREL
 CMAKE_MODULE_LINKER_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MODULE_LINKER_FLAGS_RELEASE
@@ -660,7 +621,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=19
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -677,8 +638,6 @@ CMAKE_ROOT:INTERNAL=/usr/share/cmake
 CMAKE_SHARED_LINKER_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS_DEBUG
 CMAKE_SHARED_LINKER_FLAGS_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS_DEBWITHRELINFO
-CMAKE_SHARED_LINKER_FLAGS_DEBWITHRELINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS_MINSIZEREL
 CMAKE_SHARED_LINKER_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS_RELEASE
@@ -693,8 +652,6 @@ CMAKE_SKIP_RPATH-ADVANCED:INTERNAL=1
 CMAKE_STATIC_LINKER_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_STATIC_LINKER_FLAGS_DEBUG
 CMAKE_STATIC_LINKER_FLAGS_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_STATIC_LINKER_FLAGS_DEBWITHRELINFO
-CMAKE_STATIC_LINKER_FLAGS_DEBWITHRELINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_STATIC_LINKER_FLAGS_MINSIZEREL
 CMAKE_STATIC_LINKER_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_STATIC_LINKER_FLAGS_RELEASE
@@ -713,7 +670,7 @@ CPM_DRY_RUN:INTERNAL=OFF
 CPM_FILE:INTERNAL=/root/software/newsystematics_new/cmake/Modules/CPM.cmake
 CPM_INDENT:INTERNAL=CPM:
 CPM_MODULE_PATH:INTERNAL=/root/software/newsystematics_new/build/CPM_modules
-CPM_PACKAGES:INTERNAL=systematicstools;eigen3;CMakeModules
+CPM_PACKAGES:INTERNAL=systematicstools;fhiclcpp;linedoc;eigen3;CMakeModules
 CPM_PACKAGE_CMakeModules_BINARY_DIR:INTERNAL=/root/software/newsystematics_new/build/_deps/cmakemodules-build
 CPM_PACKAGE_CMakeModules_SOURCE_DIR:INTERNAL=/root/software/newsystematics_new/build/_deps/cmakemodules-src
 CPM_PACKAGE_CMakeModules_VERSION:INTERNAL=
@@ -741,10 +698,6 @@ FIND_PACKAGE_MESSAGE_DETAILS_LibXml2:INTERNAL=[/usr/lib64/libxml2.so][/usr/inclu
 FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v1.7.3()]
 //Details about finding Pythia6
 FIND_PACKAGE_MESSAGE_DETAILS_Pythia6:INTERNAL=[/opt/pythia/6.4.28][v()]
-//Details about finding fhiclcpp
-FIND_PACKAGE_MESSAGE_DETAILS_fhiclcpp:INTERNAL=[/root/software/newsystematics_new/build/Linux/include][/root/software/newsystematics_new/build/Linux][v23.6(4.17.01)]
-//Details about finding linedoc
-FIND_PACKAGE_MESSAGE_DETAILS_linedoc:INTERNAL=[/root/software/newsystematics_new/build/Linux/include][/root/software/newsystematics_new/build/Linux][v23.6()]
 //Details about finding log4cpp
 FIND_PACKAGE_MESSAGE_DETAILS_log4cpp:INTERNAL=[/usr/include][/usr/lib64][v()]
 //ADVANCED property for variable: GIT_EXECUTABLE

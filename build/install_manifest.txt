@@ -57,7 +57,7 @@
 /root/software/newsystematics_new/build/Linux/include/systematicstools/utility/exceptions.hh
 /root/software/newsystematics_new/build/Linux/include/systematicstools/utility/md5.hh
 /root/software/newsystematics_new/build/Linux/lib/cmake/systematicstools/systtools-targets.cmake
-/root/software/newsystematics_new/build/Linux/lib/cmake/systematicstools/systtools-targets-debwithrelinfo.cmake
+/root/software/newsystematics_new/build/Linux/lib/cmake/systematicstools/systtools-targets-debug.cmake
 /root/software/newsystematics_new/build/Linux/lib/cmake/systematicstools/systematicstoolsConfigVersion.cmake
 /root/software/newsystematics_new/build/Linux/lib/cmake/systematicstools/systematicstoolsConfig.cmake
 /root/software/newsystematics_new/build/Linux/bin/setup.systematicstools.sh
@@ -105,11 +105,13 @@
 /root/software/newsystematics_new/build/Linux/include/nusystematics/systproviders/MKSinglePiTemplate_tool.hh
 /root/software/newsystematics_new/build/Linux/include/nusystematics/systproviders/MiscInteractionSysts_tool.hh
 /root/software/newsystematics_new/build/Linux/include/nusystematics/systproviders/NOvAStyleNonResPionNorm_tool.hh
+/root/software/newsystematics_new/build/Linux/include/nusystematics/systproviders/zexpansion_weighter.hh
 /root/software/newsystematics_new/build/Linux/include/nusystematics/systproviders/GENIEReWeightEngineConfig.hh
 /root/software/newsystematics_new/build/Linux/include/nusystematics/systproviders/GENIEReWeightParamConfig.hh
 /root/software/newsystematics_new/build/Linux/include/nusystematics/systproviders/GENIEReWeight_tool.hh
 /root/software/newsystematics_new/build/Linux/include/nusystematics/systproviders/GENIEResponseParameterAssociation.hh
 /root/software/newsystematics_new/build/Linux/include/nusystematics/systproviders/SkeleWeighter_tool.hh
+/root/software/newsystematics_new/build/Linux/include/nusystematics/systproviders/zexpansion_weighter.hh
 /root/software/newsystematics_new/build/Linux/include/nusystematics/utility/GENIEUtils.hh
 /root/software/newsystematics_new/build/Linux/include/nusystematics/utility/enumclass2int.hh
 /root/software/newsystematics_new/build/Linux/include/nusystematics/utility/exceptions.hh
@@ -119,7 +121,7 @@
 /root/software/newsystematics_new/build/Linux/bin/GenerateSystProviderConfigNuSyst
 /root/software/newsystematics_new/build/Linux/bin/DumpConfiguredTweaksNuSyst
 /root/software/newsystematics_new/build/Linux/lib/cmake/nusystematics/nusyst-targets.cmake
-/root/software/newsystematics_new/build/Linux/lib/cmake/nusystematics/nusyst-targets-debwithrelinfo.cmake
+/root/software/newsystematics_new/build/Linux/lib/cmake/nusystematics/nusyst-targets-debug.cmake
 /root/software/newsystematics_new/build/Linux/lib/cmake/nusystematics/nusystematicsConfigVersion.cmake
 /root/software/newsystematics_new/build/Linux/lib/cmake/nusystematics/nusystematicsConfig.cmake
 /root/software/newsystematics_new/build/Linux/bin/setup.nusystematics.sh

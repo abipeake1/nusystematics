@@ -124,10 +124,10 @@ src/nusystematics/app/GenerateSystProviderConfigNuSyst: /opt/root/v6-26-10/lib/l
 src/nusystematics/app/GenerateSystProviderConfigNuSyst: /usr/lib64/libxml2.so
 src/nusystematics/app/GenerateSystProviderConfigNuSyst: /usr/lib64/libgsl.so
 src/nusystematics/app/GenerateSystProviderConfigNuSyst: /usr/lib64/libgslcblas.so
-src/nusystematics/app/GenerateSystProviderConfigNuSyst: Linux/lib/libsystematicstools_interpreters.so
-src/nusystematics/app/GenerateSystProviderConfigNuSyst: Linux/lib/libsystematicstools_utility.so
-src/nusystematics/app/GenerateSystProviderConfigNuSyst: Linux/lib/libsystematicstools_systproviders.so
-src/nusystematics/app/GenerateSystProviderConfigNuSyst: Linux/lib/libsystematicstools_interface.so
+src/nusystematics/app/GenerateSystProviderConfigNuSyst: _deps/systematicstools-build/src/systematicstools/interpreters/libsystematicstools_interpreters.so
+src/nusystematics/app/GenerateSystProviderConfigNuSyst: _deps/systematicstools-build/src/systematicstools/utility/libsystematicstools_utility.so
+src/nusystematics/app/GenerateSystProviderConfigNuSyst: _deps/systematicstools-build/src/systematicstools/systproviders/libsystematicstools_systproviders.so
+src/nusystematics/app/GenerateSystProviderConfigNuSyst: _deps/systematicstools-build/src/systematicstools/interface/libsystematicstools_interface.so
 src/nusystematics/app/GenerateSystProviderConfigNuSyst: /opt/root/v6-26-10/lib/libHist.so
 src/nusystematics/app/GenerateSystProviderConfigNuSyst: /opt/root/v6-26-10/lib/libMatrix.so
 src/nusystematics/app/GenerateSystProviderConfigNuSyst: /opt/root/v6-26-10/lib/libMathCore.so

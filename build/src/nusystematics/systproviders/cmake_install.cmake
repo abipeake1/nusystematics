@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "DebWithRelInfo")
+    set(CMAKE_INSTALL_CONFIG_NAME "Debug")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -54,7 +54,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libnusystematics_systproviders.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libnusystematics_systproviders.so"
-         OLD_RPATH "/opt/genie/3_02_02/lib:/opt/pythia/6.4.28:/opt/lhapdf/5.9.1/lib:/opt/root/v6-26-10/lib:/root/software/newsystematics_new/build/Linux/lib:"
+         OLD_RPATH "/opt/genie/3_02_02/lib:/opt/pythia/6.4.28:/opt/lhapdf/5.9.1/lib:/opt/root/v6-26-10/lib:/root/software/newsystematics_new/build/_deps/systematicstools-build/src/systematicstools/interpreters:/root/software/newsystematics_new/build/_deps/systematicstools-build/src/systematicstools/utility:/root/software/newsystematics_new/build/_deps/systematicstools-build/src/systematicstools/systproviders:/root/software/newsystematics_new/build/_deps/systematicstools-build/src/systematicstools/interface:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libnusystematics_systproviders.so")

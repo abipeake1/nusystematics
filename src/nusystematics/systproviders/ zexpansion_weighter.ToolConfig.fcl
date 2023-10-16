@@ -1,5 +1,5 @@
 zexpansion_weighter_toolconfig: {
-    tool_type: "Reweighter"
+    tool_type: "ReWeighter"
     instance_name: "myreweighter"
 
     b1_variation_descriptor: "(-3,3,1)"

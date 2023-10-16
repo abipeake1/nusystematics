@@ -301,11 +301,11 @@ src/nusystematics/systproviders/libnusystematics_systproviders.so: /opt/root/v6-
 src/nusystematics/systproviders/libnusystematics_systproviders.so: /usr/lib64/libxml2.so
 src/nusystematics/systproviders/libnusystematics_systproviders.so: /usr/lib64/libgsl.so
 src/nusystematics/systproviders/libnusystematics_systproviders.so: /usr/lib64/libgslcblas.so
-src/nusystematics/systproviders/libnusystematics_systproviders.so: Linux/lib/libsystematicstools_interpreters.so
-src/nusystematics/systproviders/libnusystematics_systproviders.so: Linux/lib/libsystematicstools_utility.so
+src/nusystematics/systproviders/libnusystematics_systproviders.so: _deps/systematicstools-build/src/systematicstools/interpreters/libsystematicstools_interpreters.so
+src/nusystematics/systproviders/libnusystematics_systproviders.so: _deps/systematicstools-build/src/systematicstools/utility/libsystematicstools_utility.so
 src/nusystematics/systproviders/libnusystematics_systproviders.so: /opt/root/v6-26-10/lib/libCore.so
-src/nusystematics/systproviders/libnusystematics_systproviders.so: Linux/lib/libsystematicstools_systproviders.so
-src/nusystematics/systproviders/libnusystematics_systproviders.so: Linux/lib/libsystematicstools_interface.so
+src/nusystematics/systproviders/libnusystematics_systproviders.so: _deps/systematicstools-build/src/systematicstools/systproviders/libsystematicstools_systproviders.so
+src/nusystematics/systproviders/libnusystematics_systproviders.so: _deps/systematicstools-build/src/systematicstools/interface/libsystematicstools_interface.so
 src/nusystematics/systproviders/libnusystematics_systproviders.so: src/nusystematics/systproviders/CMakeFiles/nusystematics_systproviders.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/software/newsystematics_new/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX shared library libnusystematics_systproviders.so"
 	cd /root/software/newsystematics_new/build/src/nusystematics/systproviders && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/nusystematics_systproviders.dir/link.txt --verbose=$(VERBOSE)

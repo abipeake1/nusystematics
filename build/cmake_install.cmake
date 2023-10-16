@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "DebWithRelInfo")
+    set(CMAKE_INSTALL_CONFIG_NAME "Debug")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -44,6 +44,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("/root/software/newsystematics_new/build/_deps/systematicstools-build/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("/root/software/newsystematics_new/build/_deps/cmakemodules-build/cmake_install.cmake")
 endif()
 
@@ -66,8 +71,8 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     endif()
   endif()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/nusystematics" TYPE FILE FILES "/root/software/newsystematics_new/build/CMakeFiles/Export/lib/cmake/nusystematics/nusyst-targets.cmake")
-  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Dd][Ee][Bb][Ww][Ii][Tt][Hh][Rr][Ee][Ll][Ii][Nn][Ff][Oo])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/nusystematics" TYPE FILE FILES "/root/software/newsystematics_new/build/CMakeFiles/Export/lib/cmake/nusystematics/nusyst-targets-debwithrelinfo.cmake")
+  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/nusystematics" TYPE FILE FILES "/root/software/newsystematics_new/build/CMakeFiles/Export/lib/cmake/nusystematics/nusyst-targets-debug.cmake")
   endif()
 endif()
 

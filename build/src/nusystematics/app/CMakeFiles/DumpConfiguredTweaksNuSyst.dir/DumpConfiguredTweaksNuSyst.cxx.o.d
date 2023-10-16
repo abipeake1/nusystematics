@@ -415,6 +415,7 @@ src/nusystematics/app/CMakeFiles/DumpConfiguredTweaksNuSyst.dir/DumpConfiguredTw
  /root/software/newsystematics_new/src/nusystematics/systproviders/SkeleWeighter_tool.hh \
  /opt/genie/3_02_02/include/GENIE/RwCalculators/GReWeightNuXSecCCQE.h \
  /opt/genie/3_02_02/include/GENIE/RwCalculators/GReWeightModel.h \
+ /root/software/newsystematics_new/src/nusystematics/systproviders/zexpansion_weighter.hh \
  /root/software/newsystematics_new/build/_deps/systematicstools-src/src/systematicstools/interpreters/ParamHeaderHelper.hh \
  /root/software/newsystematics_new/build/_deps/systematicstools-src/src/systematicstools/interpreters/ParamValidationAndErrorResponse.hh \
  /opt/genie/3_02_02/include/GENIE/Framework/Messenger/Messenger.h \

@@ -6,5 +6,5 @@ CXX_DEFINES = -Dsystematicstools_interface_EXPORTS
 
 CXX_INCLUDES = -I/root/software/newsystematics_new/build/_deps/systematicstools-src/src -I/root/software/newsystematics_new/build/_deps/fhiclcpp-src -I/root/software/newsystematics_new/build/_deps/linedoc-src
 
-CXX_FLAGS = -fPIC -std=gnu++17
+CXX_FLAGS = -g -fPIC -std=gnu++17
 

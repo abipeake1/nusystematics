@@ -24,8 +24,8 @@
 using Eigen::MatrixXd;
 using Eigen::VectorXd;
 using namespace std;
-//using namespace genie;
-//using namespace genie::rew;
+using namespace genie;
+using namespace genie::rew;
 fstream file;
 
 
@@ -33,6 +33,9 @@ using namespace nusyst;
 using namespace systtools;
 using namespace std;
 
+//Somewhere near the top of the main function, before we do any file reading
+  
+  
 //global variables
 namespace PRD_93_113015 {
 Eigen::Vector4d a_14_cv{2.3,-0.6, -3.8, 2.3,};
@@ -92,7 +95,7 @@ Eigen::MatrixXd GetPCAFromCovarianceMatrix(Eigen::MatrixXd const &Covariance_Mat
 }
 */
 
-std::array<std::string, 4> a_params_for_zexp_names = {"a1", "a2", "a3", "a4"}; //the parameters for z expansion
+std::array<std::string, 4> a_params_for_zexp_names = {"b1", "b2", "b3", "b4"}; //the parameters for z expansion
 
 // constructor passes up configuration object to base class for generic tool
 // initialization and initialises our local copies of paramIds to unconfigured
@@ -122,6 +125,22 @@ SystMetaData ReWeighter::BuildSystMetaData(fhicl::ParameterSet const &ps,
       // add it to the metadata list to pass back.
       smd.push_back(phdr);
     }
+
+    
+  genie::RunOpt *grunopt = genie::RunOpt::Instance();
+  grunopt->EnableBareXSecPreCalc(true);
+
+  //We need to work out what the EventGeneratorList actually is
+  std::string EventGeneratorList_name = "Default";
+  grunopt->SetEventGeneratorList(EventGeneratorList_name);
+
+  //We need to work out what the TUNE name actually is
+ // std::string Tune_name = "G18_02a_00_000"; //find Tune_name using echo $GENIE_XSEC_TUNE
+  std::string Tune_name = "G18_10i_02_11a"; //Different TUNE that does work with z-expansion = G18_10i_02_11a
+  grunopt->SetTuneName(Tune_name);
+  grunopt->BuildTune();
+
+
   }
 
   // Put any options that you want to propagate to the ParamHeaders options
@@ -158,15 +177,13 @@ bool ReWeighter::SetupResponseCalculator(
     }
 
     auto param_md = md[pidx_Params[i]];
-
     CVs[i] = param_md.centralParamValue;
     Variations[i] = param_md.paramVariations;
 
+    std::vector<std::unique_ptr<GReWeightNuXSecCCQE>> rand_b_reweight_engines; // vector of reweighters
     // in the concrete version of this example we're going to configure a
     // GENIE GReWeightNuXSecCCQE instance for each configured variation.
     for (auto v : Variations[i]) {
-      
-    
       static std::array<genie::rew::GSyst_t, 4> const zexp_dials{
           genie::rew::kXSecTwkDial_ZExpA1CCQE,
           genie::rew::kXSecTwkDial_ZExpA2CCQE,
@@ -186,31 +203,21 @@ bool ReWeighter::SetupResponseCalculator(
     //ScaleAParams(CV[i])
 
       //Rotate b parameters countained in the config file
+      ReWeightEngines_new[i].push_back(std::make_unique <genie::rew::GReWeightNuXSecCCQE>());
+      //ReWeightEngines_new[i].push_back(std::make_unique <genie::rew::GReWeightNuXSecCCQE>());
+      ReWeightEngines_new[i].back()->SetMode(GReWeightNuXSecCCQE::kModeZExp);
+      
       ReWeightEngines[i].emplace_back();
-      ReWeightEngines[i].back().SetMode(genie::rew::GReWeightNuXSecCCQE::kModeZExp); // set its systematic
+
+      //------------ReWeightEngines[i].back().SetMode(genie::rew::GReWeightNuXSecCCQE::kModeZExp); // set its systematic
 
       Eigen::VectorXd aval_vec = Eigen::VectorXd::Zero(4);
     for(size_t i = 0; i < 4; ++i) { 
         aval_vec[i] = CVs[i]; }
-
-/* other bits */
-        ReWeightEngines[i].back().SetSystematic(zexp_dials[i], ScaleAparamsforGenie(aval_vec)[i]);
-      //auto a_params_for_genie_setsyst = ScaleAparamsforGenie(CVs);
-      //ReWeightEngines[i].back().SetSystematic(zexp_dials[i], a_params_for_genie_setsyst);
-
-      //ReWeightEngines[i].back().SetSystematic(zexp_dials[i], ScaleAparamsforGenie(CVs)[i]);
-
-
-      
-//ScaleAparamsforGenie(CVs)
-    //ReWeightEngines[i].back().SetSystematic(zdials, rotated b parameters  );
-      //ReWeightEngines[i].back().SetSystematic(zexp_dials[i], ScaleAparamsforGenie(CVs[i]));
-      //SetSystematicInTermsOfB(v,ReWeightEngines[i].back());//call fns on this object
-
-    //functions for NuSystematics    
-    //Function that takes covariance matrix and returns PCA matrix
-    
-    ReWeightEngines[i].back().Reconfigure();
+        //----ReWeightEngines[i].back().SetSystematic(zexp_dials[i], ScaleAparamsforGenie(aval_vec)[i]);
+        ReWeightEngines_new[i].back()->SetSystematic(zexp_dials[i], ScaleAparamsforGenie(aval_vec)[i]);
+        ReWeightEngines_new[i].back()->Reconfigure();
+    //---------ReWeightEngines[i].back().Reconfigure();
     if (verbosity_level > 2) {
     std::cout << "[LOUD]: Configured GReWeightNuXSecCCQE instance for "
                   "GENIE dial: "

@@ -411,4 +411,5 @@ src/nusystematics/app/CMakeFiles/GenerateSystProviderConfigNuSyst.dir/GenerateSy
  /root/software/newsystematics_new/src/nusystematics/systproviders/NOvAStyleNonResPionNorm_tool.hh \
  /root/software/newsystematics_new/src/nusystematics/systproviders/SkeleWeighter_tool.hh \
  /opt/genie/3_02_02/include/GENIE/RwCalculators/GReWeightNuXSecCCQE.h \
- /opt/genie/3_02_02/include/GENIE/RwCalculators/GReWeightModel.h
+ /opt/genie/3_02_02/include/GENIE/RwCalculators/GReWeightModel.h \
+ /root/software/newsystematics_new/src/nusystematics/systproviders/zexpansion_weighter.hh
